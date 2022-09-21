@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Nadya Evdokimova](https://up.htmlacademy.ru/htmlcss/35/user/2114165).
-* Наставник: `Виктория Никитина`(https://htmlacademy.ru/profile/id1217273).
+* Наставник: [Виктория Никитина](https://htmlacademy.ru/profile/id1217273).
 
 ---
 
