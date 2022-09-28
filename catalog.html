@@ -11,7 +11,7 @@
     <nav class="navigation">
       <div class="main-header-logo">
         <a class="main-header-logo-link" href="index.html">
-          <img src="" alt="логотип">
+          <img src="images/logo.svg" width="140" height="70" alt="логотип Седона">
         </a>
       </div>
       <ul class="navigation-list">
@@ -115,12 +115,20 @@
 
         <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-          <input type="text" name="" value="0" placeholder="От">
-          <input type="text" name="" value="9000" placeholder="До">
+          <label class="catalog-filter-input-label">
+            <input type="text" name="" value="0">
+            От
+          </label>
+          <label class="catalog-filter-input-label">
+            <input type="text" name="" value="9000">
+            До
+          </label>
         </fieldset>
 
-        <button class="button" type="submit">Применить</button>
-        <button class="button" type="reset">Сбросить</button>
+        <fieldset class="catalog-filter-group">
+          <button class="button-submit" type="submit">Применить</button>
+          <button class="button-reset" type="reset">Сбросить</button>
+        </fieldset>
       </form>
 
       <div class="sort-view-container">
@@ -129,13 +137,13 @@
           <option value="popular">Сначала популярные</option>
           <option value="expensive">Сначала дорогие</option>
         </select>
-        <a href="#" class="button button-light">
+        <a href="#" class="button-show-list">
           <span class="visually-hidden">Показать список</span>
         </a>
-        <a class="button" href="#">
+        <a class="button-show-tile" href="#">
           <span class="visually-hidden">Показать карточки</span>
         </a>
-        <a href="#" class="button button-light">
+        <a href="#" class="button-show-slideshow">
           <span class="visually-hidden">Показать </span>
         </a>
       </div>
@@ -143,7 +151,7 @@
       <div class="card-container">
         <div class="hotel-card">
           <a class="hotel-card-link" href="hotels.html">
-            <img class="hotel-card-image" src="images/amara-resort&spa.png" alt="отель Amara Resort&Spa">
+            <img class="hotel-card-image" src="images/amara-resort&spa.png" width="300" height="212" alt="отель Amara Resort&Spa">
             <h3 class="hotel-card-title">Amara Resort & Spa</h3>
           </a>
           <ul class="hotel-card-description">
@@ -161,7 +169,7 @@
         </div>
         <div class="hotel-card">
           <a class="hotel-card-link" href="hotels.html">
-            <img class="hotel-card-image" src="images/vilas-at-poko-diablo.png" alt="отель Vilas at Poko Diable">
+            <img class="hotel-card-image" src="images/vilas-at-poko-diablo.png" width="300" height="212" alt="отель Vilas at Poko Diable">
             <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
           </a>
           <ul class="hotel-card-description">
@@ -179,7 +187,7 @@
         </div>
         <div class="hotel-card">
           <a class="hotel-card-link" href="hotels.html">
-            <img class="hotel-card-image" src="images/desert-quail-inn.png" alt="отель Desert Quail Inn">
+            <img class="hotel-card-image" src="images/desert-quail-inn.png" width="300" height="212" alt="отель Desert Quail Inn">
             <h3 class="hotel-card-title">Desert Quail Inn</h3>
           </a>
           <ul class="hotel-card-description">
@@ -197,7 +205,7 @@
         </div>
         <div class="hotel-card">
           <a class="hotel-card-link" href="hotels.html">
-            <img class="hotel-card-image" src="images/greenTree-inn.png" alt="отель GreenTree Inn">
+            <img class="hotel-card-image" src="images/greenTree-inn.png" width="300" height="212" alt="отель GreenTree Inn">
             <h3 class="hotel-card-title">GreenTree Inn</h3>
           </a>
           <ul class="hotel-card-description">
@@ -231,7 +239,7 @@
 
       <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
         <input class="field" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email" required>
-        <button class="button subscribe-button" type="submit">
+        <button class="subscribe-button" type="submit">
           <span class="visually-hidden">Подписаться</span>
         </button>
       </form>
@@ -244,17 +252,17 @@
       <h2 class="page-footer-title visually-hidden">Социальные сети</h2>
       <ul class="footer-social-list">
         <li class="footer-social-item">
-          <a class="button" href="#">
+          <a class="button-social-vk" href="#">
             <span class="visually-hidden">ВКонтакте</span>
           </a>
         </li>
         <li class="footer-social-item">
-          <a class="button" href="#">
+          <a class="button-social-tg" href="#">
             <span class="visually-hidden">Телеграм</span>
           </a>
         </li>
         <li class="footer-social-item">
-          <a class="button" href="#">
+          <a class="button-social-yt" href="#">
             <span class="visually-hidden">Ютуб</span>
           </a>
         </li>
