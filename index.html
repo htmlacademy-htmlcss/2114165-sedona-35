@@ -5,7 +5,7 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-    <header class="main-header">
+    <header class="main-header" data-test="header">
       <div class="main-header-logo">
         <a class="main-header-logo-link">
           <img src="images/logo.svg" width="140" height="70" alt="логотип Седона">
@@ -47,12 +47,13 @@
         </ul>
       </nav>
     </header>
-    <main class="main-index">
+    <main class="main-index" data-test="main">
       <h1 class="visually-hidden">Седона</h1>
-      <section class="welcome">
+      <section class="welcome" data-test="hero">
+        <h2 class="visually-hidden">Добро пожаловать в Седону</h2>
         <img class="welcome-image" src="images/welcome.svg" width="458" height="352" alt="Добро пожаловать в Седону">
       </section>
-      <section class="advantages">
+      <section class="advantages" data-test="advantages">
         <h2 class="visually-hidden">Преимущества</h2>
         <ul class="advantages-list">
           <li class="advantages-list-item">
@@ -102,13 +103,13 @@
         </ul>
       </section>
 
-      <section class="hotels-search" id="hotels-search">
+      <section class="hotels-search" id="hotels-search" data-test="search">
         <h2 class="hotels-search-title">Заинтересовались?</h2>
         <p class="hotels-search-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <a class="button-search" href="#">Поиск гостиницы в Седоне</a>
       </section>
 
-      <section class="subscribe" id="subscribe">
+      <section class="subscribe" id="subscribe" data-test="subscribe">
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
         <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
 
@@ -121,7 +122,7 @@
       </section>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer" data-test="footer">
       <section class="footer-social">
         <h2 class="page-footer-title visually-hidden">Социальные сети</h2>
         <ul class="footer-social-list">
