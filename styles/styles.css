@@ -73,7 +73,7 @@ body {
   list-style-type: none;
 }
 
-/* Title */
+/* Начало секции Преимущества */
 .advantages-title {
   font-family: "PT Sans", sans-serif;
   font-size: 24px;
@@ -91,6 +91,12 @@ body {
   text-align: center;
   color: #333333;
 }
+
+.advantages-dark-blue {
+  background: #82B3D3;
+  color:#FFFFFF;
+}
+/* Конец секции Преимущества */
 
  /* Index columns
   .index-columns {
