@@ -178,8 +178,22 @@ body {
 
 /* Стилизация футера */
 .page-footer {
-  font-size: 40px;
-  font-weight: 400;
-  color: #242424;
-  background-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+
+.footer-contacts-address-phone {
+  Text Style: Texts/Text phone;
+  Font family: PT Sans;
+  Font style: Regular;
+  Font size: 40px;
+  Line height: 40px;
+  Line height: 77%;
+  Align: Center;
+  Vertical align: Top;
+  color: #000000;
+  text-decoration: none;
+}
+
+.page-footer .footer-social {
+  list-style-type: none;
 }
