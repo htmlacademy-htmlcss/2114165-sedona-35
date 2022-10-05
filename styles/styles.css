@@ -175,3 +175,11 @@ body {
   text-align: center;
   color: #FFFFFF;
 }
+
+/* Стилизация футера */
+.page-footer {
+  font-size: 40px;
+  font-weight: 400;
+  color: #242424;
+  background-color: #FFFFFF;
+}
