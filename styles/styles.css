@@ -182,18 +182,17 @@ background-color: #FFFFFF;
 }
 
 .footer-contacts-address-phone {
-  Text Style: Texts/Text phone;
-  Font family: PT Sans;
-  Font style: Regular;
-  Font size: 40px;
-  Line height: 40px;
-  Line height: 77%;
-  Align: Center;
-  Vertical align: Top;
-  color: #000000;
-  text-decoration: none;
+font-family: 'PT Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 40px;
+text-align: center;
+text-transform: uppercase;
+color: #000000;
+ text-decoration: none;
 }
 
-.page-footer .footer-social {
+.footer-social-item {
   list-style-type: none;
 }
