@@ -243,3 +243,27 @@ color: #000000;
 .footer-social-item {
   list-style-type: none;
 }
+
+
+/* Стилизация каталога */
+
+.main-inner {
+  color: #FFFFFF;
+  background-color: #FFFFFF;
+  background-image: url("../images/fon-filter.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.button-pagination {
+  width: 60px;
+  height: 60px;
+  background: #82B3D3;
+  color:#FFFFFF;
+  border-radius: 4px;
+}
+
+.button-pagination-active {
+  background: #F2F2F2;
+  color:#000000;
+}
