@@ -255,6 +255,33 @@ color: #000000;
   background-repeat: no-repeat;
 }
 
+.button-more {
+width: 140px;
+height: 36px;
+background: #756157;
+border-radius: 4px;
+color:#FFFFFF;
+text-decoration: none;
+}
+
+.button-to-favorites {
+  width: 140px;
+  height: 36px;
+  background: #82B3D3;
+  border-radius: 4px;
+  color:#FFFFFF;
+  text-decoration: none;
+}
+
+.button-in-favorites {
+  width: 140px;
+  height: 36px;
+  background: #7DB54F;
+  border-radius: 4px;
+  color:#000000;
+  text-decoration: none;
+}
+
 .button-pagination {
   width: 60px;
   height: 60px;
