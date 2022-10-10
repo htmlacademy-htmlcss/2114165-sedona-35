@@ -14,39 +14,61 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: "PT Sans";
-  font-style: italic;
-  font-weight: 400;
-  src: url("../fonts/pt-sans-italic.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PT Sans";
-  font-style: italic;
-  font-weight: 700;
-  src: url("../fonts/pt-sans-bold-italic.woff2") format("woff2");
-  font-display: swap;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 body {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
-  background-color: #FFFFFF;
+  background: #f2f2f2;
+
+  padding: 0;
+  margin: 0;
 }
+
+.main-header {
+  color: #333333;
+  background-color: #ffffff;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.main-index {
+  color: #333333;
+}
+
 
 /* Pages */
 
-.main-header {
-  color: #000000;
-  background-color: #FFFFFF;
+
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation-list-item {
 }
 
 .navigation-list-item-link {
-  font-family: "PT Sans", sans-serif;
   line-height: 24px;
   font-weight: 700;
   text-align: center;
@@ -55,16 +77,12 @@ body {
   text-decoration: none;
 }
 
-.navigation-list-item {
-  list-style-type: none;
-}
 /* Кнопка "Хочу сюда" */
 .button-want-here {
-  font-family: 'PT Sans';
-  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
+
   display: flex;
   align-items: center;
   text-align: center;
@@ -74,28 +92,36 @@ body {
   height: 36px;
   background: #756157;
   border-radius: 4px;
-  color: #FFFFFF;
-  }
-
-.main-index {
-  color: #333333;
-  background-color: #FFFFFF;
-  background-image: url("../images/index-background.jpg");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
+  color: #ffffff;
 }
 
+/* welcome */
+.welcome {
+  background-color: #5889b4;
+  background-image: url("../images/index-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 485px;
+  padding-top: 53px;
+  box-sizing: border-box;
+}
+
+.welcome-image {
+  display: block;
+  margin: 0 auto;
+}
 
 /* Начало секции Преимущества */
 .advantages-header {
-font-family: 'PT Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 30px;
-line-height: 36px;
-text-align: center;
-text-transform: uppercase;
-color: #000000;
+  padding: 0;
+  margin: 0;
+
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
 }
 
 .advantages-list {
@@ -107,7 +133,6 @@ color: #000000;
 }
 
 .advantages-title {
-  font-family: "PT Sans", sans-serif;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
@@ -115,8 +140,6 @@ color: #000000;
 }
 
 .advantages-description {
-  font-family: 'PT Sans';
-  font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
@@ -152,8 +175,6 @@ color: #000000;
 }
 
 .hotels-search-title {
-  font-family: 'PT Sans';
-  font-style: normal;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -173,7 +194,6 @@ color: #000000;
 }
 
 .button-search {
-  font-family: inherit;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
@@ -225,19 +245,19 @@ color: #000000;
 
 /* Стилизация футера */
 .page-footer {
-background-color: #FFFFFF;
+  background-color: #FFFFFF;
 }
 
 .footer-contacts-address-phone {
-font-family: 'PT Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 40px;
-line-height: 40px;
-text-align: center;
-text-transform: uppercase;
-color: #000000;
- text-decoration: none;
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
 }
 
 .footer-social-item {
@@ -248,20 +268,28 @@ color: #000000;
 /* Стилизация каталога */
 
 .main-inner {
-  color: #FFFFFF;
+  color: #333333;
   background-color: #FFFFFF;
   background-image: url("../images/fon-filter.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
 
+.inner-header {
+  color: #FFFFFF
+}
+
+.catalog-filter {
+  color: #FFFFFF
+}
+
 .button-more {
-width: 140px;
-height: 36px;
-background: #756157;
-border-radius: 4px;
-color:#FFFFFF;
-text-decoration: none;
+  width: 140px;
+  height: 36px;
+  background: #756157;
+  border-radius: 4px;
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
 .button-to-favorites {
@@ -269,7 +297,7 @@ text-decoration: none;
   height: 36px;
   background: #82B3D3;
   border-radius: 4px;
-  color:#FFFFFF;
+  color: #FFFFFF;
   text-decoration: none;
 }
 
@@ -278,7 +306,7 @@ text-decoration: none;
   height: 36px;
   background: #7DB54F;
   border-radius: 4px;
-  color:#000000;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -286,11 +314,13 @@ text-decoration: none;
   width: 60px;
   height: 60px;
   background: #82B3D3;
-  color:#FFFFFF;
+  color: #FFFFFF;
   border-radius: 4px;
+  list-style-type: none;
 }
 
 .button-pagination-active {
   background: #F2F2F2;
-  color:#000000;
+  color: #000000;
+  list-style-type: none;
 }
