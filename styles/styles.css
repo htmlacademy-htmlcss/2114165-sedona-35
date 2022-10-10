@@ -171,7 +171,7 @@ body {
 
 .hotels-search {
   color: #333333;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .hotels-search-title {
@@ -198,7 +198,7 @@ body {
   line-height: 36px;
   font-weight: 700;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   width: 376px;
   height: 52px;
   background: #756157;
@@ -224,7 +224,7 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .subscribe-description {
@@ -234,18 +234,18 @@ body {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .subscribe-button {
   background: #82B3D3;
-  color: #FFFFFF;
+  color: #ffffff;
   text-transform: uppercase;
 }
 
 /* Стилизация футера */
 .page-footer {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .footer-contacts-address-phone {
@@ -269,18 +269,18 @@ body {
 
 .main-inner {
   color: #333333;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   background-image: url("../images/fon-filter.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
 
 .inner-header {
-  color: #FFFFFF
+  color: #ffffff;
 }
 
 .catalog-filter {
-  color: #FFFFFF
+  color: #ffffff;
 }
 
 .button-more {
@@ -288,7 +288,7 @@ body {
   height: 36px;
   background: #756157;
   border-radius: 4px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -297,14 +297,14 @@ body {
   height: 36px;
   background: #82B3D3;
   border-radius: 4px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
 }
 
 .button-in-favorites {
   width: 140px;
   height: 36px;
-  background: #7DB54F;
+  background: #7db54f;
   border-radius: 4px;
   color: #000000;
   text-decoration: none;
@@ -313,14 +313,14 @@ body {
 .button-pagination {
   width: 60px;
   height: 60px;
-  background: #82B3D3;
-  color: #FFFFFF;
+  background: #82b3d3;
+  color: #ffffff;
   border-radius: 4px;
   list-style-type: none;
 }
 
 .button-pagination-active {
-  background: #F2F2F2;
+  background: #f2f2f2;
   color: #000000;
   list-style-type: none;
 }
