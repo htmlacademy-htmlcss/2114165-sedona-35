@@ -14,6 +14,11 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -27,7 +32,13 @@
   overflow: hidden;
 }
 
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -50,19 +61,41 @@ body {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
+.main-container {
+  flex-grow: 1;
+}
+
 .main-index {
   color: #333333;
 }
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
 
+.logo {
+  display: block;
+  margin: 0 auto;
+}
 
-/* Pages */
+/* Навигация */
 
-
+.navigation {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
 
 .navigation-list {
   margin: 0;
   padding: 0;
+  width: 507px;
   list-style: none;
+}
+
+.navigation-user {
+  max-width: 268px;
+  margin-left: auto;
 }
 
 .navigation-list-item {
@@ -76,6 +109,8 @@ body {
   background-color: #FFFFFF;
   text-decoration: none;
 }
+
+/* Навигация конец */
 
 /* Кнопка "Хочу сюда" */
 .button-want-here {
@@ -125,11 +160,23 @@ body {
 }
 
 .advantages-list {
+  margin: 0;
+  padding: 0;
   text-align: center;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .advantages-list-item {
+  width: 400px;
+  height: 384px;
   list-style-type: none;
+}
+
+.advantages-list-item-image {
+  width: 800px;
 }
 
 .advantages-title {
