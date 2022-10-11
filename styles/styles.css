@@ -184,8 +184,6 @@ body {
 }
 
 .hotels-search-description {
-  font-family: 'PT Sans';
-  font-style: normal;
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
@@ -218,8 +216,6 @@ body {
 }
 
 .subscribe-title {
-  font-family: 'PT Sans';
-  font-style: normal;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -228,8 +224,6 @@ body {
 }
 
 .subscribe-description {
-  font-family: 'PT Sans';
-  font-style: normal;
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
@@ -249,8 +243,6 @@ body {
 }
 
 .footer-contacts-address-phone {
-  font-family: 'PT Sans';
-  font-style: normal;
   font-weight: 400;
   font-size: 40px;
   line-height: 40px;
