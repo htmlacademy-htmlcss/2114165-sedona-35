@@ -11,11 +11,9 @@
   <div class="page-container">
     <header class="main-header">
       <nav class="navigation">
-        <div class="main-header-logo">
-          <a class="main-header-logo-link" href="index.html">
-            <img src="images/logo.svg" width="140" height="70" alt="логотип Седона.">
-          </a>
-        </div>
+        <a class="main-header-logo-link" href="index.html">
+          <img src="images/logo.svg" width="140" height="70" alt="логотип Седона.">
+        </a>
         <ul class="navigation-list">
           <li class="navigation-list-item">
             <a class="navigation-list-item-link" href="#">Главная</a>
@@ -24,7 +22,7 @@
             <a class="navigation-list-item-link" href="about-sedona.html">О Седоне</a>
           </li>
           <li class="navigation-list-item">
-            <a class="navigation-list-item-link" href="hotels-search.html">Гостиницы</a>
+            <a class="navigation-list-item-link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
         <ul class="navigation-list navigation-user">
@@ -43,27 +41,28 @@
             </a>
           </li>
           <li class="navigation-list-item">
-            <a class="navigation-list-item-link" href="#">
-              Хочу сюда
+            <a class="navigation-list-item-link button-want-here" href="#">
+              Хочу сюда!
             </a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="main-inner">
-      <header class="inner-header">
-        <h1 class="inner-header-title">Каталог</h1>
-        <ul class="breadcrumbs">
-          <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="index.html">Главная</a>
-          </li>
-          <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link">Каталог</a>
-          </li>
-        </ul>
-      </header>
+      <section class="hotels-filter-section">
+        <header class="inner-header">
+          <h1 class="inner-header-title">Гостиницы Седоны</h1>
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link" href="index.html">Главная</a>
+            </li>
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link">Каталог</a>
+            </li>
+          </ul>
+        </header>
 
-      <section class="catalog-holels">
+
         <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
 
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
@@ -132,8 +131,12 @@
             <button class="button-reset" type="reset">Сбросить</button>
           </fieldset>
         </form>
+      </section>
+
+      <section class="catalog-hotels">
 
         <div class="sort-view-container">
+          <p class="sort-result">Найдено гостиниц: 38</p>
           <select class="select-control" aria-label="Сортировка">
             <option value="cheap">Сначала дешёвые</option>
             <option value="popular">Сначала популярные</option>
@@ -236,25 +239,25 @@
           <li class="hotel-pagination-item">...</li>
           <li class="hotel-pagination-item"><a class="button-pagination">10</a></li>
         </ul>
-
       </section>
-
-      <section class="subscribe" id="subscribe">
+    </main>
+    <footer class="page-footer">
+      <section class="subscribe" id="subscribe" data-test="subscribe">
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
         <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
 
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="field" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email"
-            required>
-          <button class="subscribe-button" type="submit">
-            <span class="visually-hidden">Подписаться</span>
-          </button>
+          <div class="email-input-wrapper">
+            <input class="field" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email"
+              required>
+            <button class="subscribe-button" type="submit">
+              Подписаться
+            </button>
+          </div>
+
+          <div class="contacts-container">
         </form>
       </section>
-
-    </main>
-
-    <footer class="page-footer">
       <section class="footer-social">
         <h2 class="page-footer-title visually-hidden">Социальные сети</h2>
         <ul class="footer-social-list">
@@ -308,6 +311,7 @@
         </p>
       </section>
     </footer>
+  </div>
   </div>
 </body>
 
