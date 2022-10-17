@@ -178,7 +178,7 @@ body {
 
 .advantages-list-item {
   width: 400px;
-  height: 384px;
+  min-height: 384px;
   list-style-type: none;
 }
 
@@ -226,7 +226,7 @@ body {
   color: #333333;
   background-color: #ffffff;
 
-  height: 406px;
+  min-height: 406px;
 }
 
 .hotels-search-title {
