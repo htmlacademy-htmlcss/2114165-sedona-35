@@ -182,8 +182,13 @@ body {
   list-style-type: none;
 }
 
+.advantages-list-item-description {
+  width: 400px;
+}
+
 .advantages-list-item-image {
-  width: 800px;
+  width: 1200px;
+  display: flex;
 }
 
 .advantages-title {
@@ -343,6 +348,11 @@ body {
   margin: 0 auto;
   padding: 0;
 
+  justify-content: space-between;
+}
+
+.contacts-container {
+  display: flex;
   justify-content: space-between;
 }
 
