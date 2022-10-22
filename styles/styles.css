@@ -92,7 +92,8 @@ body {
   margin: 0;
   padding: 0;
   width: 507px;
-  list-style: none;
+  list-style-type: none;
+  flex-wrap: wrap; 
 }
 
 .navigation-user {
@@ -111,8 +112,15 @@ body {
   color: #000000;
   background-color: #FFFFFF;
   text-decoration: none;
+
+  padding: 20px 16px ;
+  display: block;
 }
 
+.navigation-user .navigation-list-item-link {
+  min-width: 20px;
+  min-height: 20px;
+}
 /* Навигация конец */
 
 /* Кнопка "Хочу сюда" */
@@ -121,7 +129,6 @@ body {
   font-size: 16px;
   line-height: 20px;
 
-  display: flex;
   align-items: center;
   text-align: center;
   text-transform: uppercase;
@@ -131,6 +138,10 @@ body {
   background: #756157;
   border-radius: 4px;
   color: #ffffff;
+
+  padding: 0;
+  margin-top: 14px;
+  margin-bottom: 14px;
 }
 
 /* welcome */
@@ -140,8 +151,9 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 485px;
-  padding-top: 53px;
+  padding-top: 51px;
   box-sizing: border-box;
+  padding-bottom: 82px;
 }
 
 .welcome-image {
@@ -150,9 +162,14 @@ body {
 }
 
 /* Начало секции Преимущества */
+
+.advantages {
+  padding-top: 69px;
+}
+
 .advantages-header {
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
 
   font-weight: 700;
   font-size: 30px;
@@ -160,10 +177,16 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: #000000;
+  max-width: 620px;
+
+  margin-bottom: 25px;
 }
 
 .advantages-base-description {
   text-align: center;
+  max-width: 651px;
+  margin: 0 auto;
+  margin-bottom: 90px;
 }
 
 .advantages-list {
@@ -172,7 +195,7 @@ body {
   text-align: center;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
@@ -191,14 +214,28 @@ body {
   display: flex;
 }
 
+.advantages-image-container {
+  height: 100%;
+  width: 800px;
+
+  overflow: hidden;
+}
+
+.advantages-image {
+  height: 100%;
+  width: auto;
+}
+
+
 .advantages-title {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
   color: #000000;
 
-  width: 175px;
+  max-width: 175px;
   margin: 0 auto;
+  /* margin-bottom: 62px; */
 }
 
 .advantages-description {
@@ -208,8 +245,9 @@ body {
   text-align: center;
   color: #333333;
 
-  width: 230px;
+  max-width: 230px;
   margin: 0 auto;
+  /* margin-bottom: 111px; */
 }
 
 .advantages-dark-blue {
@@ -231,7 +269,11 @@ body {
   color: #333333;
   background-color: #ffffff;
 
-  min-height: 406px;
+  max-height: 406px;
+
+  padding-top: 96px;
+
+  padding-bottom: 96px;
 }
 
 .hotels-search-title {
@@ -245,6 +287,8 @@ body {
   margin: 0 auto;
   padding: 0;
   justify-content: center;
+
+  margin-bottom: 20px;
 }
 
 .hotels-search-description {
@@ -258,7 +302,9 @@ body {
    padding: 0;
    justify-content: center;
 
-   width: 592px;
+   max-width: 592px;
+
+   margin-bottom: 54px;
 }
 
 .button-search {
@@ -291,7 +337,10 @@ body {
   background-size: 100% auto;
   background-repeat: no-repeat;
 
-  min-height: 415px;
+  max-height: 415px;
+
+  padding-top: 96px;
+  padding-bottom: 104px;
 }
 
 
@@ -306,6 +355,9 @@ body {
   padding: 0;
   text-align: center;
   justify-content: center;
+
+  margin-bottom: 20px;
+
 }
 
 .subscribe-description {
@@ -319,11 +371,12 @@ body {
   justify-content: center;
   width: 475px;
   text-align: center;
+
+  margin-bottom: 54px;
 }
 
 .email-input-wrapper {
   display: flex;
-  flex-direction: row;
   width: 684px;
   height: 52px;
   padding: 0;
@@ -354,28 +407,26 @@ body {
 .contacts-container {
   display: flex;
   justify-content: space-between;
+
+  padding-top: 40px;
+  padding-bottom: 30px;
+
+  min-height: 50px;
 }
 
-/* .page-footer-container { */
-  /* display: flex; */
-  /* width: 988px; */
-  /* margin: 0 auto; */
-
-
 .footer-social {
-  /* margin-left: auto; */
-  /* max-width: 142px; */
-  /* display: flex; */
+  padding: 5px 0;
 }
 
 .footer-social-list {
   display: flex;
+  margin: 0 auto;
+
+  flex-wrap: wrap;
+  max-width: 142px;
+  padding: 0;
 }
-/*
-.footer-contacts {
-  width: 331px;
-  margin-right: 41.5px;
-} */
+
 
 .footer-contacts-address-phone {
   font-weight: 400;
@@ -391,6 +442,8 @@ body {
   list-style-type: none;
 
   display: flex;
+
+  padding: 12px 10px;
 }
 
 
