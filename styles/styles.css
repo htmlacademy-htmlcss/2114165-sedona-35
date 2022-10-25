@@ -477,6 +477,10 @@ body {
   padding: 0;
 }
 
+/* .breadcrumbs-link {
+  list-style-type: none;
+  
+} */
 .catalog-filter {
   display: flex;
   margin: 0 auto;
@@ -488,6 +492,22 @@ body {
   margin: 0 auto;
   padding: 0;
   width: 1060px;
+}
+
+.select-control {
+  display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 14px 20px;
+gap: 94px;
+
+width: 292px;
+height: 49px;
+box-sizing: border-box;
+border: 2px solid #E5E5E5;
+border-radius: 4px;
+
 }
 
 /* Начало секции Сортировка */
@@ -508,7 +528,7 @@ body {
 
 .hotel-card {
   display: grid;
-
+  
   border: 1px solid #E6E6E6;
   border-radius: 4px;
 
