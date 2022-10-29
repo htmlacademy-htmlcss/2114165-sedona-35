@@ -132,6 +132,24 @@ body {
   margin-bottom: 14px;
 }
 
+.like-number {
+  height: 20px;
+  min-width: 20px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #7DB54F; 
+  border-radius: 10px;
+  color:#ffffff;
+  font-size: 10px;
+  line-height: 10px;
+  position: absolute;
+  right: -9;
+  top: -10;
+  box-sizing: border-box;
+  padding: 3px;
+}
+
 /* Навигация конец */
 
 /* Кнопка "Хочу сюда" */
