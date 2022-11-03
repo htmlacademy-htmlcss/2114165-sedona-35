@@ -539,11 +539,11 @@ body {
 
 .hotels-filter-section {
   background-image: url("../images/fon-filter.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
 
-  min-height: 412px;
-  width: 1200px;
+  /* min-height: 412px;  если его задать, то отступы еще сильнее увеличат размер этой секции. Нужен дополнительный wrapper?*/ 
+  padding: 35px 70px 70px; 
 }
 
 .inner-header {
@@ -555,6 +555,14 @@ body {
 .inner-header-title {
   margin: 0 auto;
   padding: 0;
+
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+}
+
+.breadcrumbs-item {
+  list-style-type: none;
 }
 
 .breadcrumbs {
@@ -568,11 +576,40 @@ body {
 }
 
 .catalog-filter {
-  display: flex;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 150px 70px 150px 167px 288px 70px 191px;
+  /* display: flex; */
+  margin-top: 40px;
   padding: 0;
   color: #ffffff;
 }
+
+.infrastructure-group {
+  grid-column: 1/1;
+}
+
+.house-type-group {
+  grid-column: 3/3;
+}
+
+.price-group {
+  grid-column: 5/5;
+}
+
+.buttons-group {
+  grid-column: 7/7;
+}
+
+.catalog-filter-group {
+  border: none;
+  padding: 0;
+}
+
+.catalog-filter-list {
+  padding: 0;
+}
+
+
 
 .catalog-hotels {
   margin: 0 auto;
@@ -600,6 +637,7 @@ body {
   font-size: 30px;
   margin: 0;
   padding: 0;
+  line-height: 49px;
 }
 
 .select-control {
@@ -614,16 +652,13 @@ body {
   box-sizing: border-box;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
-  margin-top: 27px;
 }
 
 .button-submit {
   background: #82B3D3;
   color: #ffffff;
   border-radius: 4px;
-  display: flex;
 
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 8px 50px;
@@ -636,13 +671,15 @@ body {
 
   border: none;
   text-transform: uppercase;
+  font-weight: 700;
+font-size: 16px;
+line-height: 20px;
 }
 
 .button-reset {
   background: transparent;
   color: #ffffff;
-  display: flex;
-  flex-direction: row;
+
   justify-content: center;
   align-items: center;
   padding: 8px 50px;
@@ -654,12 +691,11 @@ body {
   border-radius: 4px;
   border: none;
   text-transform: uppercase;
+  font-weight: 700;
+font-size: 16px;
+line-height: 20px;
 }
 
-
-.catalog-filter-group {
-  border: none;
-}
 .tile-container {
   display: flex;
   gap: 8px;
@@ -669,11 +705,14 @@ body {
   min-width: 48px;
   height: 48px;
 
-  /* Icons/basic */
-
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   position: relative;
+}
+
+.button-change-view-active {
+  border-color: #000000;
+
 }
 
 /* Начало секции Сортировка */
