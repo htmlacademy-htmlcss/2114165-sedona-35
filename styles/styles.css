@@ -53,6 +53,11 @@ body {
   display: flex;
   color: #333333;
   background-color: #ffffff;
+
+  max-height: 64px;
+
+  padding-right: 70px;
+  padding-left: 70px;
 }
 
 .page-container {
@@ -86,6 +91,7 @@ body {
   display: flex;
   width: 1200px;
   margin: 0 auto;
+  padding-left: 30px;
 }
 
 .navigation-list {
@@ -108,9 +114,11 @@ body {
 .navigation-list-item-link {
   line-height: 24px;
   font-weight: 700;
+
+  font-size: 20px;
+
   text-align: center;
   color: #000000;
-  background-color: #FFFFFF;
   text-decoration: none;
 
   padding: 20px 16px;
@@ -118,13 +126,14 @@ body {
 }
 
 .navigation-user .navigation-list-item-link {
-  min-width: 20px;
-  min-height: 20px;
+  position: relative;
+  min-width: 12px;
+  min-height: 26px;
 }
 
 .navigation-list-item-button {
   width: 160px;
-  height: 36px; 
+  height: 36px;
   line-height: 36px;
   text-align: center;
 
@@ -132,22 +141,33 @@ body {
   margin-bottom: 14px;
 }
 
+.navigation-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #000000;
+}
+
 .like-number {
   height: 20px;
   min-width: 20px;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #7DB54F; 
+  background-color: #7DB54F;
   border-radius: 10px;
-  color:#ffffff;
+  color: #ffffff;
   font-size: 10px;
   line-height: 10px;
   position: absolute;
-  right: -9;
-  top: -10;
   box-sizing: border-box;
   padding: 3px;
+
+  left: 21px;
+  top: 12px;
 }
 
 /* Навигация конец */
@@ -164,6 +184,8 @@ body {
   font-size: 16px;
   text-transform: uppercase;
   text-decoration: none;
+
+  margin-left: 20px;
 }
 
 
@@ -210,6 +232,10 @@ body {
   max-width: 651px;
   margin: 0 auto;
   margin-bottom: 90px;
+
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
 }
 
 .advantages-list {
@@ -258,7 +284,7 @@ body {
 
   max-width: 175px;
   margin: 0 auto;
-  /* margin-bottom: 62px; */
+  margin-bottom: 30px;
 }
 
 .advantages-description {
@@ -284,6 +310,23 @@ body {
 
 .advantages-blue {
   background: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-dark-blue-title {
+  padding-top: 92px;
+}
+
+.advantages-light-blue-title {
+  padding-top: 103px;
+}
+
+.advantages-rectangle {
+  padding-bottom: 30px;
+}
+
+.advantages-card-icon {
+  padding-top: 80px;
+  padding-bottom: 30px;
 }
 
 /* Блок с поиском гостиницы  */
@@ -517,7 +560,7 @@ body {
 
 /* .breadcrumbs-link {
   list-style-type: none;
-  
+
 } */
 .catalog-filter {
   display: flex;
@@ -532,9 +575,30 @@ body {
   width: 1060px;
 }
 
+/* Начало секции Сортировка */
+.sort-view-container {
+  display: flex;
+  justify-content: space-between;
+
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 49px;
+  text-transform: uppercase;
+  color: #000000;
+
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+
+.sort-result {
+  font-weight: 700;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+}
+
 .select-control {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 14px 20px;
@@ -545,19 +609,32 @@ body {
   box-sizing: border-box;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
-  margin-top: 27px;
 }
 
-/* Начало секции Сортировка */
-.sort-view-container {
+.tile-container {
   display: flex;
-  justify-content: space-between;
+  gap: 8px;
+}
 
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-  text-transform: uppercase;
-  color: #000000;
+.button-change-view {
+  min-width: 48px;
+  height: 48px;
+
+  /* Icons/basic */
+
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  position: relative;
+}
+
+.tile-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #000000;
 }
 
 /* Конец секции Сортировка */
@@ -618,8 +695,10 @@ body {
 }
 
 .hotel-card-item {
-  height: 36px; /* Задаем постоянную высоту, чтобы ссылка внутри (тег a) вытянулась под её размер */ 
-  line-height: 36px; /* тоже надо, чтобы <a> выровнялся */
+  height: 36px;
+  /* Задаем постоянную высоту, чтобы ссылка внутри (тег a) вытянулась под её размер */
+  line-height: 36px;
+  /* тоже надо, чтобы <a> выровнялся */
   width: 140px;
   text-align: center;
 }
@@ -642,7 +721,7 @@ body {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: 700; 
+  font-weight: 700;
   font-size: 16px;
 }
 
@@ -655,7 +734,7 @@ body {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: 700; 
+  font-weight: 700;
   font-size: 16px;
 }
 
@@ -668,7 +747,7 @@ body {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: 700; 
+  font-weight: 700;
   font-size: 16px;
 }
 
@@ -676,9 +755,10 @@ body {
   display: inline-block;
   width: 100%;
   height: 100%;
-  background: #F2F2F2;;
+  background: #F2F2F2;
+  ;
   border-radius: 4px;
-  color: #000000; 
+  color: #000000;
 }
 
 
@@ -703,7 +783,7 @@ body {
 }
 
 .hotel-pagination-item {
-  width: 60px;
+  min-width: 60px;
   height: 60px;
   line-height: 60px;
   text-align: center;
@@ -725,8 +805,9 @@ body {
   color: #000000;
   list-style-type: none;
 }
+
 .bitton-pagination-prev {
-  color:#000000;
+  color: #000000;
   background-color: transparent;
 }
 
