@@ -564,11 +564,47 @@ body {
 .breadcrumbs-item {
   list-style-type: none;
 }
-
+/* для галки */
 .breadcrumbs {
   display: flex;
   margin: 0 auto;
   padding: 0;
+
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  color: #ffffff;
+  list-style-type: none;
+}
+
+/* для галки */
+.breadcrumbs-icon {
+  display: block;
+  background-image: url(../images/white-breadcrumbs.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  padding-right: 40px;
+}
+/* для галки */
+.breadcrumbs-link::after {
+  display: block;
+  position: absolute;
+  content: "";
+  background-image: url(../images/white-breadcrumbs.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  /* width: 8px;
+  height: 19.94px; */
+}
+/* для галки */
+.breadcrumbs-link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: left;
+  text-decoration: none;
+  text-transform: none;
+  color:#ffffff
 }
 
 .catalog-filter-item {
@@ -672,8 +708,8 @@ body {
   border: none;
   text-transform: uppercase;
   font-weight: 700;
-font-size: 16px;
-line-height: 20px;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .button-reset {
@@ -692,8 +728,8 @@ line-height: 20px;
   border: none;
   text-transform: uppercase;
   font-weight: 700;
-font-size: 16px;
-line-height: 20px;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .tile-container {
