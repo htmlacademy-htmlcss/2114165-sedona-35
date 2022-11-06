@@ -190,6 +190,22 @@ body {
   margin-left: 20px;
 }
 
+.button-want-here-link:hover {
+  background: #615048;
+}
+
+.button-want-here-link:focus {
+  background: #615048;
+}
+
+.button-want-here-link:active {
+  background: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-want-here-link:disabled {
+  background: #E5E5E5;
+}
 
 /* welcome */
 .welcome {
@@ -410,7 +426,7 @@ body {
 
 .button-search {
   font-size: 20px;
-  line-height: 36px;
+  line-height: 52px; /* такая же, как высота всей кнопки, чтобы выровнялся текст по вертикали */
   font-weight: 700;
   text-align: center;
   color: #ffffff;
@@ -649,15 +665,44 @@ body {
   color:#ffffff
 }
 
-.catalog-filter-item {
-  list-style-type: none;
-}
-
 .catalog-filter {
   display: grid;
   grid-template-columns: 150px 70px 150px 167px 288px 70px 191px;
   padding: 0;
   color: #ffffff;
+}
+
+.catalog-filter-item {
+  list-style-type: none;
+}
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
+
+.control-mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+
+  background: #FFFFFF;
+  border-radius: 4px;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before,
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  width: 12px;
+  height: 10px;
+  background-image: url(../images/checkbox-checked.svg);
+  /* background-color: #242424; */
+  content: "";
 }
 
 .infrastructure-group {
@@ -770,6 +815,23 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
+}
+
+.button-reset:hover {
+  opacity: 0.6; /* чтобы текст в кнопке стал прозрачнее */
+}
+
+.button-reset:focus {
+  border: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+
+.button-reset:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-reset:disabled {
+  opacity: 0.1;
 }
 
 .tile-container {
