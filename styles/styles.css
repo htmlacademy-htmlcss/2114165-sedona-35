@@ -594,12 +594,10 @@ body {
   line-height: 78px;
 }
 
-.breadcrumbs-item {
-  list-style-type: none;
-}
 /* для галки */
 .breadcrumbs {
   display: flex;
+
   margin: 0 auto;
   padding: 0;
 
@@ -607,28 +605,39 @@ body {
   padding-top: 20px;
   padding-bottom: 40px;
   color: #ffffff;
+}
+
+.breadcrumbs-item {
   list-style-type: none;
 }
 
 /* для галки */
 .breadcrumbs-icon {
   display: block;
-  background-image: url(../images/white-breadcrumbs.svg);
-  background-repeat: no-repeat;
-  background-position: left;
-  padding-right: 40px;
+  position: relative;
+  padding-right: 28px;
 }
+
 /* для галки */
-.breadcrumbs-link::after {
+.breadcrumbs-icon::after {
+  content:'';
   display: block;
   position: absolute;
-  content: "";
+
+  /*ширина и высота (контейнера?) для галки*/
+  width: 8px;
+  height: 8px;
+
+  /*для самой глалки*/
   background-image: url(../images/white-breadcrumbs.svg);
   background-repeat: no-repeat;
   background-position: center;
-  /* width: 8px;
-  height: 19.94px; */
+
+  /*её положение*/
+  top: 7px;
+  right: 9px;
 }
+
 /* для галки */
 .breadcrumbs-link {
   font-weight: 400;
@@ -647,8 +656,6 @@ body {
 .catalog-filter {
   display: grid;
   grid-template-columns: 150px 70px 150px 167px 288px 70px 191px;
-  /* display: flex; */
-  margin-top: 40px;
   padding: 0;
   color: #ffffff;
 }
