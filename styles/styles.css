@@ -110,7 +110,7 @@ body {
 }
 
 .navigation-list-item {
-  
+
 }
 
 .navigation-list-item-link {
@@ -286,6 +286,11 @@ body {
 
   max-width: 175px;
   margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+/* у заголовка карточки с иконкой (бургер, дом...) отступ надо сделать меньше */
+.advantages-title-with-icon {
   margin-bottom: 30px;
 }
 
@@ -314,12 +319,40 @@ body {
   background: rgba(131, 179, 211, 0.2);
 }
 
-.advantages-dark-blue-title {
-  padding-top: 92px;
-}
-
 .advantages-light-blue-title {
   padding-top: 103px;
+}
+
+.advantages-light-blue-title-without-icon {
+  padding-top: 103px;
+  position: relative;
+}
+
+.advantages-dark-blue-title {
+  padding-top: 92px;
+  position: relative;
+}
+
+.advantages-dark-blue-title::before {
+  position: absolute;
+  bottom: -33px;
+  left: 50%;
+  width: 60px;
+  height: 2px;
+  margin-left: -30px;
+  background: rgba(255, 255, 255, 0.3);
+  content: "";
+}
+
+.advantages-light-blue-title-without-icon::before {
+  position: absolute;
+  bottom: -33px;
+  left: 50%;
+  width: 60px;
+  height: 2px;
+  margin-left: -30px;
+  background: rgba(0, 0, 0, 0.3);
+  content: "";
 }
 
 .advantages-rectangle {
@@ -542,8 +575,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 
-  /* min-height: 412px;  если его задать, то отступы еще сильнее увеличат размер этой секции. Нужен дополнительный wrapper?*/ 
-  padding: 35px 70px 70px; 
+  /* min-height: 412px;  если его задать, то отступы еще сильнее увеличат размер этой секции. Нужен дополнительный wrapper?*/
+  padding: 35px 70px 70px;
 }
 
 .inner-header {
