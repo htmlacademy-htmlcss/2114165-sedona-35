@@ -566,6 +566,17 @@ body {
   text-decoration: none;
 }
 
+.footer-contacts-address-phone:hover {
+  color: #756157;
+}
+
+.footer-contacts-address-phone:focus {
+  color: #756157;
+}
+
+.footer-contacts-address-phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
 .footer-social-item {
   list-style-type: none;
 
@@ -1037,6 +1048,18 @@ body {
   list-style-type: none;
 }
 
+.button-pagination:hover {
+  background: #68A2CA;
+}
+
+.button-pagination:focus {
+  background: #68A2CA;
+}
+
+.button-pagination:active {
+  background: #82B3D3;
+}
+
 .button-pagination-active {
   background: #f2f2f2;
   color: #000000;
@@ -1091,4 +1114,253 @@ body {
   text-align: center;
 
   margin-bottom: 54px;
+}
+
+/* Модальное окно */
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: rgba(242, 242, 242, 0.8);
+}
+
+.modal {
+  display: flex;
+
+align-items: flex-start;
+
+position: relative;
+  margin: 0 auto;
+
+  padding: 64px 70px;
+
+  background: #FFFFFF;
+box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+border-radius: 30px;
+
+}
+
+.modal-hotel-search {
+  /* width: 360px; */
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 0;
+  right: 0;
+  width: 56px;
+  height: 44px;
+  background-color: #ffffff;
+  border: none;
+  background-image: url("../images/close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.modal-title {
+  margin: 0;
+  margin-bottom: 24px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.hotel-search-form .field-group {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.hotel-search-form-user-options {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+}
+
+.hotel-search-form-user-options .control-label {
+  font-weight: 400;
+}
+
+.hotel-search-form .field {
+  width: 328px;
+}
+
+.hotel-search-form-recovery {
+  line-height: 22px;
+  color: #000000;
+}
+
+.hotel-search-form-button {
+  width: 360px;
+  margin-bottom: 16px;
+}
+
+.hotel-search-form .button + .button {
+  margin: 0;
+}
+
+.hotel-search-form-register {
+  width: 360px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.modal-container-close {
+  /* display: none; */
+}
+
+
+.hotel-search-form-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 77px;
+
+  /* position: absolute; */
+  /* width: 100%; */
+  height: 60px;
+
+  background: #83B3D3;
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+.modal-content {
+  display: grid;
+  grid-template-columns: 577px;
+  grid-template-rows: 100px 348px;
+}
+
+.hotel-search-form {
+  display: grid;
+  grid-template-columns: 577px;
+  grid-template-rows: 48px 48px 48px 60px;
+  row-gap: 48px;
+
+  grid-column: 1/1;
+  grid-row: 2/2;
+}
+
+.date-in {
+ display: flex;
+ grid-row: 1/1;
+}
+.date-out {
+  display: flex;
+  grid-row: 2/2;
+}
+.adult-child-amount-container {
+  display: flex;
+  grid-row: 3/3;
+}
+.child-amount {
+
+}
+.hotel-search-form-button {
+  grid-row: 4/4;
+}
+
+.adult-amount {
+  display: flex;
+}
+
+.child-amount {
+  display: flex;
+}
+
+/* tooltip с чадами */
+.tooltip {
+  margin-top: 4px;
+  margin-left: 2px;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+}
+
+.tooltip-toggle {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.tooltip-icon {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+}
+
+.tooltip-toggle:hover .tooltip-icon {
+  color: #AF7842;
+}
+
+.tooltip-text {
+  background: #333333;
+box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+border-radius: 10px;
+
+  color: #ffffff;
+
+  font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+
+  text-transform: none;
+
+  padding-top: 15px;
+  padding-bottom: 18px;
+  padding-left: 22px;
+  padding-right: 18px;
+
+  display: block;
+  width: 256px;
+
+  position: absolute;
+  top: 100%; /* чтобы оно выпадало вниз. Если поставить bottom, то будет наверх */
+  margin-top: 15px;
+
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  display: none;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+/* треугольник у тултипа */
+.tooltip-text:after {
+  content:'';
+  background-image: url("../images/tooltip-arrow.svg");
+
+  width: 19px;
+height: 9px;
+
+position:absolute;
+
+bottom: 100%; /* если написать top, то оно прилипнет книзу */
+
+left:0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-label-icon {
+  position: relative;
+  padding-right: 16px;
 }
