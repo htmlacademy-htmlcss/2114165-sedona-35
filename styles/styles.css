@@ -53,6 +53,11 @@ body {
   display: flex;
   color: #333333;
   background-color: #ffffff;
+
+  max-height: 64px;
+
+  padding-right: 70px;
+  padding-left: 70px;
 }
 
 .page-container {
@@ -86,6 +91,7 @@ body {
   display: flex;
   width: 1200px;
   margin: 0 auto;
+  padding-left: 30px;
 }
 
 .navigation-list {
@@ -103,14 +109,18 @@ body {
   margin-left: auto;
 }
 
-.navigation-list-item {}
+.navigation-list-item {
+
+}
 
 .navigation-list-item-link {
   line-height: 24px;
   font-weight: 700;
+
+  font-size: 20px;
+
   text-align: center;
   color: #000000;
-  background-color: #FFFFFF;
   text-decoration: none;
 
   padding: 20px 16px;
@@ -118,18 +128,48 @@ body {
 }
 
 .navigation-user .navigation-list-item-link {
-  min-width: 20px;
-  min-height: 20px;
+  position: relative;
+  min-width: 12px;
+  min-height: 26px;
 }
 
 .navigation-list-item-button {
   width: 160px;
-  height: 36px; 
+  height: 36px;
   line-height: 36px;
   text-align: center;
 
   margin-top: 14px;
   margin-bottom: 14px;
+}
+
+.navigation-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #000000;
+}
+
+.like-number {
+  height: 20px;
+  min-width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #7DB54F;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 10px;
+  line-height: 10px;
+  position: absolute;
+  box-sizing: border-box;
+  padding: 3px;
+
+  left: 21px;
+  top: 12px;
 }
 
 /* Навигация конец */
@@ -146,8 +186,26 @@ body {
   font-size: 16px;
   text-transform: uppercase;
   text-decoration: none;
+
+  margin-left: 20px;
 }
 
+.button-want-here-link:hover {
+  background: #615048;
+}
+
+.button-want-here-link:focus {
+  background: #615048;
+}
+
+.button-want-here-link:active {
+  background: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-want-here-link:disabled {
+  background: #E5E5E5;
+}
 
 /* welcome */
 .welcome {
@@ -192,6 +250,10 @@ body {
   max-width: 651px;
   margin: 0 auto;
   margin-bottom: 90px;
+
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
 }
 
 .advantages-list {
@@ -240,7 +302,12 @@ body {
 
   max-width: 175px;
   margin: 0 auto;
-  /* margin-bottom: 62px; */
+  margin-bottom: 60px;
+}
+
+/* у заголовка карточки с иконкой (бургер, дом...) отступ надо сделать меньше */
+.advantages-title-with-icon {
+  margin-bottom: 30px;
 }
 
 .advantages-description {
@@ -266,6 +333,51 @@ body {
 
 .advantages-blue {
   background: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-light-blue-title {
+  padding-top: 103px;
+}
+
+.advantages-light-blue-title-without-icon {
+  padding-top: 103px;
+  position: relative;
+}
+
+.advantages-dark-blue-title {
+  padding-top: 92px;
+  position: relative;
+}
+
+.advantages-dark-blue-title::before {
+  position: absolute;
+  bottom: -33px;
+  left: 50%;
+  width: 60px;
+  height: 2px;
+  margin-left: -30px;
+  background: rgba(255, 255, 255, 0.3);
+  content: "";
+}
+
+.advantages-light-blue-title-without-icon::before {
+  position: absolute;
+  bottom: -33px;
+  left: 50%;
+  width: 60px;
+  height: 2px;
+  margin-left: -30px;
+  background: rgba(0, 0, 0, 0.3);
+  content: "";
+}
+
+.advantages-rectangle {
+  padding-bottom: 30px;
+}
+
+.advantages-card-icon {
+  padding-top: 80px;
+  padding-bottom: 30px;
 }
 
 /* Блок с поиском гостиницы  */
@@ -314,7 +426,7 @@ body {
 
 .button-search {
   font-size: 20px;
-  line-height: 36px;
+  line-height: 52px; /* такая же, как высота всей кнопки, чтобы выровнялся текст по вертикали */
   font-weight: 700;
   text-align: center;
   color: #ffffff;
@@ -476,8 +588,11 @@ body {
 
 .hotels-filter-section {
   background-image: url("../images/fon-filter.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
+
+  /* min-height: 412px;  если его задать, то отступы еще сильнее увеличат размер этой секции. Нужен дополнительный wrapper?*/
+  padding: 35px 70px 70px;
 }
 
 .inner-header {
@@ -489,24 +604,133 @@ body {
 .inner-header-title {
   margin: 0 auto;
   padding: 0;
+
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
 }
 
+/* для галки */
 .breadcrumbs {
   display: flex;
+
   margin: 0 auto;
   padding: 0;
+
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  color: #ffffff;
 }
 
-/* .breadcrumbs-link {
+.breadcrumbs-item {
   list-style-type: none;
-  
-} */
+}
+
+/* для галки */
+.breadcrumbs-icon {
+  display: block;
+  position: relative;
+  padding-right: 28px;
+}
+
+/* для галки */
+.breadcrumbs-icon::after {
+  content:'';
+  display: block;
+  position: absolute;
+
+  /*ширина и высота (контейнера?) для галки*/
+  width: 8px;
+  height: 8px;
+
+  /*для самой глалки*/
+  background-image: url(../images/white-breadcrumbs.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /*её положение*/
+  top: 7px;
+  right: 9px;
+}
+
+/* для галки */
+.breadcrumbs-link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: left;
+  text-decoration: none;
+  text-transform: none;
+  color:#ffffff
+}
+
 .catalog-filter {
-  display: flex;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 150px 70px 150px 167px 288px 70px 191px;
   padding: 0;
   color: #ffffff;
 }
+
+.catalog-filter-item {
+  list-style-type: none;
+}
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
+
+.control-mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+
+  background: #FFFFFF;
+  border-radius: 4px;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before,
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  width: 12px;
+  height: 10px;
+  background-image: url(../images/checkbox-checked.svg);
+  /* background-color: #242424; */
+  content: "";
+}
+
+.infrastructure-group {
+  grid-column: 1/1;
+}
+
+.house-type-group {
+  grid-column: 3/3;
+}
+
+.price-group {
+  grid-column: 5/5;
+}
+
+.buttons-group {
+  grid-column: 7/7;
+}
+
+.catalog-filter-group {
+  border: none;
+  padding: 0;
+}
+
+.catalog-filter-list {
+  padding: 0;
+}
+
+
 
 .catalog-hotels {
   margin: 0 auto;
@@ -514,9 +738,31 @@ body {
   width: 1060px;
 }
 
+/* Начало секции Сортировка */
+.sort-view-container {
+  display: flex;
+  justify-content: space-between;
+
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 49px;
+  text-transform: uppercase;
+  color: #000000;
+
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+
+.sort-result {
+  font-weight: 700;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 49px;
+}
+
 .select-control {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 14px 20px;
@@ -527,7 +773,84 @@ body {
   box-sizing: border-box;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
-  margin-top: 27px;
+}
+
+.button-submit {
+  background: #82B3D3;
+  color: #ffffff;
+  border-radius: 4px;
+
+  justify-content: center;
+  align-items: center;
+  padding: 8px 50px;
+  gap: 10px;
+
+  width: 191px;
+  height: 36px;
+
+  margin-bottom: 32px;
+
+  border: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.button-reset {
+  background: transparent;
+  color: #ffffff;
+
+  justify-content: center;
+  align-items: center;
+  padding: 8px 50px;
+  gap: 10px;
+
+  width: 191px;
+  height: 36px;
+
+  border-radius: 4px;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.button-reset:hover {
+  opacity: 0.6; /* чтобы текст в кнопке стал прозрачнее */
+}
+
+.button-reset:focus {
+  border: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+
+.button-reset:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-reset:disabled {
+  opacity: 0.1;
+}
+
+.tile-container {
+  display: flex;
+  gap: 8px;
+}
+
+.button-change-view {
+  min-width: 48px;
+  height: 48px;
+
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  position: relative;
+}
+
+.button-change-view-active {
+  border-color: #000000;
+
 }
 
 /* Начало секции Сортировка */
@@ -542,6 +865,15 @@ body {
   color: #000000;
 }
 
+.tile-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #000000;
+}
 /* Конец секции Сортировка */
 
 .card-container {
@@ -600,8 +932,10 @@ body {
 }
 
 .hotel-card-item {
-  height: 36px; /* Задаем постоянную высоту, чтобы ссылка внутри (тег a) вытянулась под её размер */ 
-  line-height: 36px; /* тоже надо, чтобы <a> выровнялся */
+  height: 36px;
+  /* Задаем постоянную высоту, чтобы ссылка внутри (тег a) вытянулась под её размер */
+  line-height: 36px;
+  /* тоже надо, чтобы <a> выровнялся */
   width: 140px;
   text-align: center;
 }
@@ -624,7 +958,7 @@ body {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: 700; 
+  font-weight: 700;
   font-size: 16px;
 }
 
@@ -637,7 +971,7 @@ body {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: 700; 
+  font-weight: 700;
   font-size: 16px;
 }
 
@@ -650,7 +984,7 @@ body {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: 700; 
+  font-weight: 700;
   font-size: 16px;
 }
 
@@ -658,9 +992,10 @@ body {
   display: inline-block;
   width: 100%;
   height: 100%;
-  background: #F2F2F2;;
+  background: #F2F2F2;
+  ;
   border-radius: 4px;
-  color: #000000; 
+  color: #000000;
 }
 
 
@@ -685,7 +1020,7 @@ body {
 }
 
 .hotel-pagination-item {
-  width: 60px;
+  min-width: 60px;
   height: 60px;
   line-height: 60px;
   text-align: center;
@@ -707,8 +1042,9 @@ body {
   color: #000000;
   list-style-type: none;
 }
+
 .bitton-pagination-prev {
-  color:#000000;
+  color: #000000;
   background-color: transparent;
 }
 
